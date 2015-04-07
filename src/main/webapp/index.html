@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title></title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<ul>
+    <li><a ui-sref="home"> Home</a></li>
+    <li><a ui-sref="contacts">Contacts</a></li>
+</ul>
+mai jos ii content
+<div ui-view></div>
+
+<!--angularjs dependencies-->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+<script src="app.js"></script>
+
+<!--home-->
+<script src="components/home/homeCtrl.js"></script>
+<script src="components/home/homeService.js"></script>
+<!--contacts-->
+<script src="components/contacts/contactsCtrl.js"></script>
+<script src="components/contacts/contactsService.js"></script>
+
+</body>
+</html>

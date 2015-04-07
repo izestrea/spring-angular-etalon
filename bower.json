@@ -1,0 +1,14 @@
+{
+  "name": "Etalon",
+  "version": "1",
+  "authors": [
+    "Denis Chiosa <denchiosa@gmail.com>"
+  ],
+  "description": "an etalon for java web projects",
+  "main": "src/main/webapp",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "http://reigncode.com"
+}
