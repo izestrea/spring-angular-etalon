@@ -36,8 +36,10 @@ dependencies {
 
     //@RestController,   @RequestMapping
     compile("org.springframework.boot:spring-boot-starter-web")
-    //@Entity
+    //@Entity , @EnableJpaRepositories
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    //hot spot
+    compile('org.springframework:springloaded:1.2.1.RELEASE')
     compile("com.h2database:h2")
     testCompile('junit:junit')
     testCompile 'org.springframework:spring-test'

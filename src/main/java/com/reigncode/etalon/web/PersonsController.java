@@ -2,6 +2,8 @@ package com.reigncode.etalon.web;
 
 import com.reigncode.etalon.domain.Person;
 import com.reigncode.etalon.repository.PersonRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/persons")
 public class PersonsController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(PersonsController.class);
+
     @Autowired
     private PersonRepository personRepository;
 
@@ -25,6 +29,7 @@ public class PersonsController {
     @RequestMapping(method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public Page<Person> findAll(Pageable pageable) {
+        LOGGER.info("calling find all perssons...");
         return personRepository.findAll(pageable);
     }
 
