@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- level : http://logback.qos.ch/manual/architecture.html -->
+
+<configuration>
+    <appender name="fileAppender" class="ch.qos.logback.core.FileAppender">
+        <file>secretariat.log</file>
+        <append>true</append>
+        <layout class="ch.qos.logback.classic.html.HTMLLayout"/>
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- <appender name="DB" class="ch.qos.logback.classic.db.DBAppender"> <connectionSource
+        class="ch.qos.logback.core.db.DriverManagerConnectionSource"> <driverClass>com.mysql.jdbc.Driver</driverClass>
+        <url>jdbc:mysql://localhost:3306/logs</url> <user>root</user> <password>free</password>
+        </connectionSource> </appender -->
+
+    <!-- disable hibernate logging, -->
+    <logger name="org.hibernate">
+        <level value="ERROR"/>
+    </logger>
+    <!--thymleaf-->
+    <logger name="org.thymeleaf">
+        <level value="ERROR"/>
+    </logger>
+    <!--spring-->
+    <logger name="org.springframework">
+        <!--<level value="ERROR"/>-->
+        <level value="INFO"/>
+    </logger>
+    <!--apache-->
+    <logger name="org.apache">
+        <level value="ERROR"/>
+    </logger>
+
+    <root level="debug">
+        <appender-ref ref="fileAppender"/>
+        <appender-ref ref="consoleAppender"/>
+        <!-- <appender-ref ref="DB" /> -->
+    </root>
+</configuration>

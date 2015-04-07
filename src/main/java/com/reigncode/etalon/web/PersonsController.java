@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by Denis on 3/16/2015.
+ * test controller
  */
 @RestController
-@RequestMapping("/api/persons")
 public class PersonsController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PersonsController.class);
@@ -26,7 +26,7 @@ public class PersonsController {
     /**
      * @return all objects  from repository
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/api/persons", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public Page<Person> findAll(Pageable pageable) {
         LOGGER.info("calling find all perssons...");

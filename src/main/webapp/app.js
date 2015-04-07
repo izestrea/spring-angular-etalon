@@ -1,10 +1,12 @@
 /**
  * Created by Denis on 3/15/2015.
+ * basic ng config
  */
-var app = angular.module('app',['ui.router','ui.bootstrap']);
+var app = angular.module('app', ['ui.router', 'ui.bootstrap']);
 
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
+    $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/404');
 
     $stateProvider
@@ -16,7 +18,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('contacts', {
             url: "/contacts",
             templateUrl: "components/contacts/contacts.html",
-            controller:'contactsCtrl'
+            controller: 'contactsCtrl'
         })
         .state('404', {
             url: '/404',

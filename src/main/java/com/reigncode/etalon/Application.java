@@ -2,10 +2,10 @@ package com.reigncode.etalon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * Created by Denis on 3/15/2015.
+ * starter class
  */
 @SpringBootApplication
 public class Application {
