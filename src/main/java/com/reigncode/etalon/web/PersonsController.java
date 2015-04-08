@@ -40,7 +40,7 @@ public class PersonsController {
      */
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public void save(@RequestBody Person object) throws CustomException {
-        if (object.getFirstName() == null) throw new CustomException("first Name cannot be null", 2);
+        if (object.getFirstName() == null || object.getFirstName().isEmpty()) throw new CustomException("first Name cannot be null", 2);
         personRepository.save(object);
     }
 }

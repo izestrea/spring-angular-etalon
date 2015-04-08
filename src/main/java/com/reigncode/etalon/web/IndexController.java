@@ -40,7 +40,7 @@ public class IndexController implements ErrorController {
         HttpStatus status = getStatus(request);
         LOGGER.error("error status: " + status + " and exception is " + e.getMessage());
         if (e instanceof CustomException) {
-            return new ResponseEntity<>(new CustomJsonException((CustomException) e), status);
+            return new ResponseEntity<>(new CustomJsonException((CustomException) e), HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(status);
     }

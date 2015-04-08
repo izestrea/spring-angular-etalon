@@ -20,7 +20,11 @@ app.config(
                 url: '/tables',
                 templateUrl: 'partials/tables.html'
             })
-            .state('404', {
+            .state('persons', {
+                url: '/persons',
+                templateUrl: 'partials/persons.html',
+                controller: 'personsCtrl'
+            }).state('404', {
                 url: '/404',
                 templateUrl: 'partials/404.html'
             });
