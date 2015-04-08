@@ -3,21 +3,26 @@
 /**
  * Route configuration for the RDash module.
  */
-angular.module('RDash').config(['$stateProvider', '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
+app.config(
+    function ($locationProvider, $stateProvider, $urlRouterProvider) {
 
-        // For unmatched routes
-        $urlRouterProvider.otherwise('/');
+        $locationProvider.html5Mode(true);
+        $urlRouterProvider.otherwise('/404');
 
         // Application routes
         $stateProvider
             .state('index', {
                 url: '/',
-                templateUrl: 'templates/dashboard.html'
+                templateUrl: 'partials/dashboard.html',
+                controller: 'AlertsCtrl'
             })
             .state('tables', {
                 url: '/tables',
-                templateUrl: 'templates/tables.html'
+                templateUrl: 'partials/tables.html'
+            })
+            .state('404', {
+                url: '/404',
+                templateUrl: 'partials/404.html'
             });
     }
-]);
+);

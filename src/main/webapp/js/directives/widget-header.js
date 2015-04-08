@@ -2,8 +2,7 @@
  * Widget Header Directive
  */
 
-angular
-    .module('RDash')
+app
     .directive('rdWidgetHeader', rdWidgetTitle);
 
 function rdWidgetTitle() {

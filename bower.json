@@ -1,15 +1,12 @@
 {
-  "name": "rdash-angular",
+  "name": "etalon",
   "version": "0.0.1",
   "description": "An AngularJS implementation of the responsive dashboard",
-  "homepage": "https://github.com/Ehesp/Responsive-Dashboard",
+  "homepage": "https://www.reigncode.com",
   "authors": [
-    "Elliot Hesp <elliot.hesp@gmail.com>"
+    "ReignCode"
   ],
-  "contributors": [
-    "Ricardo Pascua Jr <rdpascua@outlook.com>",
-    "Leonel Samayoa <leonel.e.samayoa@gmail.com>"
-  ],
+  "contributors": [],
   "main": "index.html",
   "license": "MIT",
   "ignore": [
@@ -27,9 +24,5 @@
     "angular-ui-router": "^0.2.10",
     "bootstrap": "~3.2.0",
     "font-awesome": "~4.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rdash/rdash-angular"
   }
 }

@@ -3,8 +3,7 @@
  * @see http://tobiasahlin.com/spinkit/
  */
 
-angular
-    .module('RDash')
+app
     .directive('rdLoading', rdLoading);
 
 function rdLoading() {
