@@ -1,6 +1,7 @@
 package com.reigncode.etalon.web;
 
 import com.reigncode.etalon.domain.Person;
+import com.reigncode.etalon.exceptions.CustomException;
 import com.reigncode.etalon.repository.PersonRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +39,8 @@ public class PersonsController {
      * save or update an  object
      */
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public void save(@RequestBody Person object) {
+    public void save(@RequestBody Person object) throws CustomException {
+        if (object.getFirstName() == null) throw new CustomException("first Name cannot be null", 2);
         personRepository.save(object);
     }
 }
