@@ -3,11 +3,14 @@ package com.reigncode.etalon.exceptions;
 /**
  * Created by denchiosa on 4/8/15.
  */
+
 public class CustomException extends RuntimeException {
 
     private int type;
     private String message;
 
+    public CustomException() {
+    }
 
     public CustomException(String message, int type) {
         this.message = message;
@@ -30,4 +33,3 @@ public class CustomException extends RuntimeException {
         this.message = message;
     }
 }
-
